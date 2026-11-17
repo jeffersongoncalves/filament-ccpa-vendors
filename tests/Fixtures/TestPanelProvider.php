@@ -4,6 +4,7 @@ namespace JeffersonGoncalves\Filament\CcpaVendors\Tests\Fixtures;
 
 use Filament\Panel;
 use Filament\PanelProvider;
+use JeffersonGoncalves\Filament\CcpaVendors\CcpaVendorsPlugin;
 
 class TestPanelProvider extends PanelProvider
 {
@@ -13,6 +14,9 @@ class TestPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->login();
+            ->login()
+            ->plugins([
+                CcpaVendorsPlugin::make(),
+            ]);
     }
 }
