@@ -1,0 +1,62 @@
+{
+    "name": "jeffersongoncalves/filament-ccpa-vendors",
+    "description": "Filament plugin for laravel-ccpa-vendors: your CCPA service providers, contractors and third parties in the panel, with the contract terms each role requires, reviews by risk and data return on termination.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "filament-ccpa-vendors"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/filament-ccpa-vendors",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jefferson Simão Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "larastan/larastan": "^2.0|^3.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\Filament\\CcpaVendors\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\Filament\\CcpaVendors\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\Filament\\CcpaVendors\\CcpaVendorsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
